@@ -23,7 +23,6 @@ class Quiz{
             }
             this.quiz_data.splice(rand, 1);
             document.getElementById("button_updater").className = "button button_disabled";
-            document.getElementById("button_updater").blur();
         }
     }
     check(choosenId){
@@ -70,19 +69,7 @@ const quiz_data = [
     {question:"Каким термином обозначается незаполненная валентная связь, которая проявляет себя как положительный заряд, численно равный заряду электрона?",
         answers:["Дырка", "Отверстие", "Спин", "Щель"]},
     {question:"Название первого в мире коммерчески успешного микропроцессора:",
-        answers:["Intel 4004", "Celeron N3050", "Pentium 4", "Intel 8008"]},
-    {question:"Какая из перечисленных технологий НЕ полагается на использование полупроводников?",
-        answers:["Генетическая инженерия", "Интернет вещей", "Искусственный интеллект", "Солнечные батареи"]},
-    {question:"Какой из перечисленных материалов не являеться полупроводником?",
-        answers:["Фосфор", "Арсенид индия", "Кремний", "Галий"]},
-    {question:"В стенах какой компании был создан первый биполярный транзистор?",
-        answers:["Bell Labs", "Texas Instruments", "Sprague Electric Company", "Fairchild Semiconductor"]},
-    {question:"Как называют эмпирическое утверждение, что плотность элементов на интегральной схеме увеличивается раз в 2 года?",
-        answers:["Закон Мура", "Закон Годвина", "Закон Ньютона", "Закон Мерфи"]},
-    {question:"Кто из создателей интегральной схемы удостоился Нобелевской премии?",
-        answers:["Джек Килби", "Курт Леговец", "Роберт Нойс", "Все"]},
-    {question:"Какая компания создала первую коммерчески успешную интегральную схему?",
-        answers:["Fairchild Semiconductor", "Bell Labs", "Texas Instruments", "Sprague Electric Company"]},
+        answers:["Intel 4004", "Celeron N3050", "Спин", "Щель"]},
 ];
 
 const marks = [
