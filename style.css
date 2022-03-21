@@ -1,12 +1,13 @@
 body{
     margin: 0px;
+    text-size-adjust: 250%;
 }
 #title_box{
     height: 100vh;
     display: flex;
 }
 #title{
-    font-size: 72pt;
+    font-size: 36pt;
     border: 5px solid indigo;
     flex: 1;
     display: flex;
@@ -20,23 +21,29 @@ main{
     font-family: 'Open Sans', sans-serif;
     display: grid;
     grid-gap: 50px;
-    justify-content: center;
     grid-template-areas: 
     "nav"
     "art"
     "act"
     "emp"
+    "ar2"
     "foo";
+    padding-left: 10px;
+    padding-right: 10px;
 }
 nav{
     grid-area: nav;
-}
-li{
-    padding: 5px;
+    padding: 15px;
 }
 #navbar a{
     color: inherit;
     text-decoration: none;
+}
+ul{
+    padding: 0;
+}
+li{
+    padding: 5px;
 }
 #navbar li:hover{
     text-decoration-line: underline;
@@ -45,6 +52,9 @@ li{
 article{
     grid-area: art;
     padding: 15px;
+}
+img{
+    max-width: 33vw;
 }
 #activity{
     grid-area: act;
@@ -59,14 +69,16 @@ article{
 }
 .button{
     text-align: left;  
-    font: inherit !important;
+    font: inherit;
     padding: 5px 10px;
     border: none;
     border-radius: 8px;
     transition-duration: 0.2s;
 }
-.button:hover{
-    background-color: #c8c8c8;
+@media (hover: hover) {
+    .button:hover{
+        background-color: #c8c8c8;
+    }
 }
 .button:focus{
     background-color: #555;
@@ -90,6 +102,10 @@ article{
     grid-area: emp;
     height: 300px;
 }
+#article2{
+    grid-area: ar2;
+    padding: 15px;
+}
 footer{
     grid-area: foo;
     background-color: black;
@@ -99,12 +115,18 @@ footer{
     padding: 15px;
 }
 @media (min-width: 1200px){
+    body{
+        margin: 0;
+        text-size-adjust: none;
+    }
     main{
+        justify-content: center;
         grid-template-columns:  250px 800px;
         grid-template-areas: 
         "nav art"
         "nav act"
         "nav emp"
+        "nav ar2"
         "foo foo";
     }
     #navbar{
@@ -118,10 +140,8 @@ footer{
     li{
         border-right: 2px solid grey;
     }
-    #navborder{
-        padding: 0;
-        margin: 0;
-        border-right: solid 1px grey;
+    img{
+        max-width: 225px;
     }
 }
 figure{
@@ -130,7 +150,11 @@ figure{
     flex-direction: column;
     align-items: center;
     margin: 15px;
+    max-width: 500px;
 }
 figcaption{
     margin-top: 10px;
+}
+#article2 li{
+    border-right: none;
 }
